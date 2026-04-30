@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = process.cwd();
+const workspaceRoot = process.cwd();
+const publicRoot = path.join(workspaceRoot, 'public');
 const base = process.env.BASE_PATH ?? '/';
 
 const ignoredDirs = new Set([
@@ -11,7 +12,6 @@ const ignoredDirs = new Set([
   '.obsidian',
   '.vitepress',
   'node_modules',
-  'raw',
 ]);
 
 function titleFromMarkdown(filePath: string): string {
@@ -24,7 +24,7 @@ function titleFromMarkdown(filePath: string): string {
 }
 
 function linkFor(filePath: string): string {
-  const rel = path.relative(root, filePath).replace(/\\/g, '/').replace(/\.md$/, '');
+  const rel = path.relative(publicRoot, filePath).replace(/\\/g, '/').replace(/\.md$/, '');
   return rel === 'index' ? '/' : `/${rel}`;
 }
 
@@ -33,7 +33,7 @@ function collectMarkdownFiles(dir: string): string[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files: string[] = [];
   for (const entry of entries) {
-    if (entry.name.startsWith('.') && entry.name !== '.vitepress') continue;
+    if (entry.name.startsWith('.')) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       if (!ignoredDirs.has(entry.name)) files.push(...collectMarkdownFiles(full));
@@ -45,7 +45,7 @@ function collectMarkdownFiles(dir: string): string[] {
 }
 
 function sidebarItems() {
-  const files = collectMarkdownFiles(root).filter((file) => path.basename(file) !== 'index.md');
+  const files = collectMarkdownFiles(publicRoot).filter((file) => path.basename(file) !== 'index.md');
   return files.map((file) => ({ text: titleFromMarkdown(file), link: linkFor(file) }));
 }
 
@@ -59,7 +59,8 @@ function slugifyWikiTarget(target: string): string {
 
 export default defineConfig({
   title: 'Wiki',
-  description: 'AI/ML research wiki',
+  description: 'Public AI/ML research wiki',
+  srcDir: 'public',
   base,
   cleanUrls: true,
   ignoreDeadLinks: true,
@@ -67,11 +68,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Schema', link: '/SCHEMA' },
-      { text: 'Log', link: '/log' },
+      { text: 'Test', link: '/test-publish' },
     ],
     sidebar: [
-      { text: 'Wiki', items: sidebarItems() },
+      { text: 'Public Wiki', items: sidebarItems() },
     ],
     search: {
       provider: 'local',

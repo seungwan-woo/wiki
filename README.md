@@ -2,6 +2,8 @@
 
 AI/ML research wiki published with VitePress.
 
+Only Markdown files under `/home/wsw/wiki/public` are published to the web. Root-level and private working notes remain in the vault/repository but are excluded from the VitePress source tree.
+
 ## Local development
 
 ```bash
@@ -15,6 +17,12 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Publishing rule
+
+- Public web content: `/home/wsw/wiki/public/**`
+- Private/internal content: everything outside `public/`
+- GitHub Pages URL: `https://seungwan-woo.github.io/wiki/`
 
 ## Notes
 
