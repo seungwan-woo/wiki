@@ -95,7 +95,9 @@ export default defineConfig({
           const target = slugifyWikiTarget(targetPart);
           const label = (labelPart ?? targetPart).trim();
           const tokenOpen = state.push('link_open', 'a', 1);
-          tokenOpen.attrs = [['href', `${base}${target}`.replace(/\/+/g, '/')]];
+          // VitePress applies the configured base path to root-relative internal links.
+          // Do not prefix `base` here, otherwise GitHub Pages builds generate /wiki/wiki/... links.
+          tokenOpen.attrs = [['href', `/${target}`]];
           const tokenText = state.push('text', '', 0);
           tokenText.content = label;
           state.push('link_close', 'a', -1);
