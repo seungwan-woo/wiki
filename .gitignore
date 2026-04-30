@@ -4,3 +4,19 @@ node_modules/
 dist/
 .upload-notified
 .DS_Store
+
+# Local/private Obsidian vault metadata and private wiki working areas.
+# Only public/ plus publishing infrastructure should be tracked.
+.obsidian/
+raw/
+entities/
+concepts/
+comparisons/
+queries/
+_archive/
+
+# Root-level private wiki notes. Public web notes live under public/.
+/SCHEMA.md
+/index.md
+/log.md
+/log-*.md
