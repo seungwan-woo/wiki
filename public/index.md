@@ -12,6 +12,7 @@ tags: [wiki, public]
 
 ## Published Pages
 
+- [[sei-software-architecture-books|SEI 아키텍처 핵심 서적]]
 - [[test-publish|Publish 테스트 문서]]
 
 ## 참고자료
