@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Component-and-Connector View Learning Map</title>
+  <desc id="desc">A learning map connecting runtime architecture, components, connectors, ports, interface delegation, AOP concerns, connector abstraction, and C&amp;C styles.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <style>
+      .title { font: 800 42px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 500 18px system-ui, -apple-system, Segoe UI, sans-serif; fill: #cbd5e1; }
+      .card { fill: url(#card); stroke: rgba(255,255,255,.22); stroke-width: 1.2; filter: url(#shadow); }
+      .label { font: 800 20px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f8fafc; }
+      .body { font: 500 15px system-ui, -apple-system, Segoe UI, sans-serif; fill: #dbeafe; }
+      .small { font: 600 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #bae6fd; }
+      .line { stroke: #93c5fd; stroke-width: 3; fill: none; marker-end: url(#arrow); opacity: .86; }
+      .dash { stroke: #fbbf24; stroke-width: 2.5; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrow); opacity: .9; }
+      .chip { fill: rgba(14,165,233,.18); stroke: rgba(125,211,252,.55); stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="560" rx="34" fill="url(#bg)"/>
+  <circle cx="1050" cy="80" r="180" fill="#38bdf8" opacity="0.08"/>
+  <circle cx="140" cy="500" r="220" fill="#a78bfa" opacity="0.10"/>
+
+  <text x="64" y="72" class="title">Component-and-Connector View</text>
+  <text x="66" y="106" class="subtitle">런타임 구조를 component, connector, port/interface, style, quality tactic으로 읽는 방법</text>
+
+  <rect x="60" y="155" width="250" height="130" rx="22" class="card"/>
+  <text x="88" y="195" class="label">Runtime Architecture</text>
+  <text x="88" y="226" class="body">실행 중 상호작용</text>
+  <text x="88" y="251" class="body">장애 · 성능 · 이벤트 흐름</text>
+
+  <rect x="475" y="150" width="250" height="138" rx="22" class="card"/>
+  <text x="517" y="192" class="label">C&amp;C View Core</text>
+  <text x="510" y="224" class="body">Component + Connector</text>
+  <text x="510" y="249" class="body">Port + Interface + Role</text>
+
+  <rect x="890" y="155" width="250" height="130" rx="22" class="card"/>
+  <text x="922" y="195" class="label">Quality Reasoning</text>
+  <text x="922" y="226" class="body">Availability · Performance</text>
+  <text x="922" y="251" class="body">Modifiability · Security</text>
+
+  <path d="M310 220 C365 220 410 220 475 220" class="line"/>
+  <path d="M725 220 C775 220 830 220 890 220" class="line"/>
+
+  <rect x="84" y="350" width="210" height="112" rx="18" class="card"/>
+  <text x="115" y="386" class="label">AOP Concern</text>
+  <text x="112" y="418" class="body">logging · tx · auth</text>
+  <text x="112" y="442" class="small">scattered → separated</text>
+
+  <rect x="365" y="350" width="210" height="112" rx="18" class="card"/>
+  <text x="390" y="386" class="label">Delegation</text>
+  <text x="392" y="418" class="body">external interface</text>
+  <text x="392" y="442" class="small">→ internal port/role</text>
+
+  <rect x="646" y="350" width="210" height="112" rx="18" class="card"/>
+  <text x="674" y="386" class="label">Abstraction</text>
+  <text x="680" y="418" class="body">connector or component?</text>
+  <text x="680" y="442" class="small">hide vs expose detail</text>
+
+  <rect x="927" y="350" width="210" height="112" rx="18" class="card"/>
+  <text x="970" y="386" class="label">C&amp;C Styles</text>
+  <text x="958" y="418" class="body">pub-sub · client-server</text>
+  <text x="958" y="442" class="small">layered · repository</text>
+
+  <path d="M185 350 C230 305 335 280 475 245" class="dash"/>
+  <path d="M470 350 C500 310 545 290 585 288" class="dash"/>
+  <path d="M752 350 C715 310 674 292 620 288" class="dash"/>
+  <path d="M1032 350 C975 306 850 276 725 246" class="dash"/>
+
+  <g transform="translate(493 497)">
+    <rect x="0" y="0" width="214" height="34" rx="17" class="chip"/>
+    <text x="28" y="22" class="small">Draw the line meaning, not only the line.</text>
+  </g>
+</svg>
