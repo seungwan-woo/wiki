@@ -11,6 +11,25 @@ tags: [software-architecture, sei, documentation, quality-attribute]
 - Software Architecture in Practice, 4th Edition: 아키텍처 이론과 실제 적용 전반을 다루는 입문-실무 교과서
 - Documenting Software Architectures: Views and Beyond, 2nd Edition: 아키텍처 문서화(documentation)와 뷰(view) 구성 방법에 집중한 실무 지침서
 
+![SEI architecture books learning map](/images/sei-books-learning-map.svg)
+
+## 빠른 요약
+
+- **Software Architecture in Practice 4/e**는 “무엇을 설계·평가할 것인가?”에 답한다. 핵심은 Quality Attribute Scenario(품질 속성 시나리오), Tactic(전술), Pattern(패턴), ATAM(아키텍처 트레이드오프 분석 방법), Architecture Debt(아키텍처 부채)다.
+- **Documenting Software Architectures 2/e**는 “그 결정을 누구에게 어떤 view(뷰)로 설명할 것인가?”에 답한다. 핵심은 Module View(모듈 뷰), Component-and-Connector View(C&C 뷰), Allocation View(할당 뷰), View Packet(뷰 패킷), Rationale(근거)다.
+- 두 책을 함께 읽으면 **ASR(Architecturally Significant Requirement, 아키텍처적으로 중요한 요구사항) → 설계 결정 → 평가 → 문서화 → 리뷰**로 이어지는 실무 루프를 만들 수 있다.
+
+```mermaid
+flowchart LR
+  ASR["ASR<br/>아키텍처적으로 중요한 요구사항"] --> Scenario["Quality Attribute Scenario<br/>품질 속성 시나리오"]
+  Scenario --> Tactic["Tactic / Pattern<br/>전술 / 패턴 선택"]
+  Tactic --> Decision["Architecture Decision<br/>아키텍처 결정"]
+  Decision --> Eval["ATAM / Review<br/>평가와 리스크 식별"]
+  Eval --> Views["Views and Beyond<br/>Module · C&C · Allocation"]
+  Views --> Feedback["Stakeholder Feedback<br/>이해관계자 피드백"]
+  Feedback -. refine .-> ASR
+```
+
 ## 1. Software Architecture in Practice, 4th Edition
 
 - 원제: Software Architecture in Practice, Fourth Edition
@@ -193,13 +212,60 @@ tags: [software-architecture, sei, documentation, quality-attribute]
 
 ## 3. 두 책의 관계
 
-| 관점 | Software Architecture in Practice 4/e | Documenting Software Architectures 2/e |
-|---|---|---|
-| 주제 | 아키텍처 이론과 실무 전체 | 아키텍처 문서화 전문 |
-| 중심 질문 | 좋은 아키텍처를 어떻게 설계, 평가, 운영할 것인가? | 아키텍처를 누구에게, 어떤 view로, 얼마나 정확히 설명할 것인가? |
-| 핵심 도구 | Quality Attribute Scenario, Tactic, Pattern, ATAM, Architecture Debt | Views and Beyond, Viewtype, Style, View Packet, Documentation Package |
-| 실무 산출물 | 품질 속성 시나리오, 설계 결정, 평가 결과, 부채 목록 | 모듈 뷰, C&C 뷰, 할당 뷰, 인터페이스 문서, 동작 문서, 리뷰 체크리스트 |
-| 함께 쓰는 방식 | 무엇을 설계하고 평가할지 정한다 | 설계/평가 결과를 이해관계자별로 전달 가능하게 만든다 |
+```mermaid
+flowchart TB
+  subgraph SAIP["Software Architecture in Practice 4/e"]
+    QAS["Quality Attribute Scenario\n품질 속성 시나리오"]
+    Tactics["Tactic / Pattern\n전술 / 패턴"]
+    ATAM["ATAM / Debt\n평가 / 부채"]
+  end
+
+  subgraph DSA["Documenting Software Architectures 2/e"]
+    Module["Module View\n정적 코드·책임 구조"]
+    CC["C&C View\n런타임 상호작용 구조"]
+    Allocation["Allocation View\n환경·조직 매핑"]
+  end
+
+  QAS --> Tactics --> ATAM
+  ATAM -->|"문서화할 결정과 리스크"| Module
+  ATAM -->|"운영 시나리오와 상호작용"| CC
+  ATAM -->|"배포·조직 제약"| Allocation
+  Module --> Review["Document Review\n문서 리뷰"]
+  CC --> Review
+  Allocation --> Review
+  Review -->|"누락/모호성 피드백"| QAS
+```
+
+- **주제**
+  - Software Architecture in Practice 4/e: 아키텍처 이론과 실무 전체
+  - Documenting Software Architectures 2/e: 아키텍처 문서화 전문
+- **중심 질문**
+  - Software Architecture in Practice 4/e: 좋은 아키텍처를 어떻게 설계, 평가, 운영할 것인가?
+  - Documenting Software Architectures 2/e: 아키텍처를 누구에게, 어떤 view(뷰)로, 얼마나 정확히 설명할 것인가?
+- **핵심 도구**
+  - Software Architecture in Practice 4/e: Quality Attribute Scenario(품질 속성 시나리오), Tactic(전술), Pattern(패턴), ATAM(아키텍처 트레이드오프 분석 방법), Architecture Debt(아키텍처 부채)
+  - Documenting Software Architectures 2/e: Views and Beyond(V&B), Viewtype(뷰타입), Style(스타일), View Packet(뷰 패킷), Documentation Package(문서 패키지)
+- **실무 산출물**
+  - Software Architecture in Practice 4/e: 품질 속성 시나리오, 설계 결정, 평가 결과, 부채 목록
+  - Documenting Software Architectures 2/e: 모듈 뷰, C&C 뷰, 할당 뷰, 인터페이스 문서, 동작 문서, 리뷰 체크리스트
+- **함께 쓰는 방식**
+  - Software Architecture in Practice 4/e가 **무엇을 설계하고 평가할지** 정한다.
+  - Documenting Software Architectures 2/e가 설계/평가 결과를 **이해관계자별로 전달 가능하게** 만든다.
+
+![Views and Beyond summary](/images/views-and-beyond-summary.svg)
+
+### View 선택 감각
+
+```mermaid
+flowchart LR
+  Concern["Stakeholder Concern\n이해관계자 관심사"] --> Q{"무엇이 궁금한가?"}
+  Q -->|"책임, 패키지, 레이어, 의존성"| Module["Module View\n모듈 뷰"]
+  Q -->|"런타임 컴포넌트, 호출, 이벤트, 프로토콜"| CC["C&C View\n컴포넌트-커넥터 뷰"]
+  Q -->|"서버, 컨테이너, 팀, 배포 위치"| Allocation["Allocation View\n할당 뷰"]
+  Module --> Packet["View Packet\n주 표현 + 요소 카탈로그 + 근거"]
+  CC --> Packet
+  Allocation --> Packet
+```
 
 ## 4. 권장 학습 순서
 

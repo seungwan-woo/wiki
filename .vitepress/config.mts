@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -57,7 +58,7 @@ function slugifyWikiTarget(target: string): string {
     .toLowerCase();
 }
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: 'Wiki',
   description: 'Public AI/ML research wiki',
   srcDir: 'public',
@@ -107,4 +108,4 @@ export default defineConfig({
       });
     },
   },
-});
+}));
