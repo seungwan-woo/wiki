@@ -6,7 +6,7 @@ tags: [software-architecture, component-and-connector, runtime-architecture, vie
 
 # C&C 뷰와 커넥터 스타일
 
-> 첨부 이미지들은 모두 **Component-and-Connector View(C&C View, 컴포넌트-커넥터 뷰)**를 읽는 감각을 보여준다. 핵심은 “코드가 어떤 파일/클래스에 들어 있는가”가 아니라, **런타임에 어떤 실행 단위가 어떤 상호작용으로 품질 속성을 만든다**를 문서화하는 것이다.
+> 첨부 이미지들은 모두 <strong>Component-and-Connector View(C&C View, 컴포넌트-커넥터 뷰)</strong>를 읽는 감각을 보여준다. 핵심은 “코드가 어떤 파일/클래스에 들어 있는가”가 아니라, <strong>런타임에 어떤 실행 단위가 어떤 상호작용으로 품질 속성을 만든다</strong>를 문서화하는 것이다.
 
 ![C&C view learning map](/images/component-and-connector-view-map.svg)
 
@@ -14,20 +14,20 @@ tags: [software-architecture, component-and-connector, runtime-architecture, vie
 
 첨부한 책 페이지들은 다음 주제를 다룬다.
 
-- **Aspect-Oriented Programming(AOP, 관점지향 프로그래밍)**
-  - 로깅(logging), 접근 제어(access control), 트랜잭션 관리(transaction management) 같은 **crosscutting concern(횡단 관심사)**가 여러 클래스에 흩어지고(scattered), 업무 로직과 뒤섞이는(tangled) 문제를 설명한다.
-  - AOP는 이런 관심사를 **aspect(관점)**로 모아 업무 코드와 분리하려는 구현 패러다임이다.
-- **Runtime Architecture(런타임 아키텍처)의 C&C 기본 표기**
+- <strong>Aspect-Oriented Programming(AOP, 관점지향 프로그래밍)</strong>
+  - 로깅(logging), 접근 제어(access control), 트랜잭션 관리(transaction management) 같은 <strong>crosscutting concern(횡단 관심사)</strong>가 여러 클래스에 흩어지고(scattered), 업무 로직과 뒤섞이는(tangled) 문제를 설명한다.
+  - AOP는 이런 관심사를 <strong>aspect(관점)</strong>로 모아 업무 코드와 분리하려는 구현 패러다임이다.
+- <strong>Runtime Architecture(런타임 아키텍처)의 C&C 기본 표기</strong>
   - 고객 창구(client), 주/백업 계정 서버(server), 계정 데이터베이스(database), 관리 애플리케이션(database application) 같은 실행 요소와 연결을 보여준다.
-  - 출판-구독(pub-sub), 요청/응답(request/response), 데이터베이스 접근(DB access) 같은 **connector(커넥터)**가 런타임 관계를 표현한다.
-- **Interface Delegation(인터페이스 위임)**
+  - 출판-구독(pub-sub), 요청/응답(request/response), 데이터베이스 접근(DB access) 같은 <strong>connector(커넥터)</strong>가 런타임 관계를 표현한다.
+- <strong>Interface Delegation(인터페이스 위임)</strong>
   - 내부 포트(internal port)를 외부 포트(external port)나 connector role(커넥터 역할)에 매핑해, 컴포넌트 내부 구조와 외부 인터페이스의 관계를 문서화한다.
-- **Connector Abstraction(커넥터 추상화) 선택**
+- <strong>Connector Abstraction(커넥터 추상화) 선택</strong>
   - 같은 출판-구독 구조도 “이벤트 버스 하나”로 표현할지, “이벤트 디스패처 컴포넌트 + 연결 집합”으로 표현할지 선택할 수 있다.
-  - 선택 기준은 **얼마나 많은 구현 구조를 노출할 것인가**이다.
-- **C&C Style Taxonomy(C&C 스타일 분류)**
+  - 선택 기준은 <strong>얼마나 많은 구현 구조를 노출할 것인가</strong>이다.
+- <strong>C&C Style Taxonomy(C&C 스타일 분류)</strong>
   - 데이터 흐름, 호출-반환, 이벤트 기반, 레파지토리, 계층 같은 C&C 스타일을 분류한다.
-- **예제 시스템 뷰**
+- <strong>예제 시스템 뷰</strong>
   - ArchE UI 이벤트 관리자, J2EE/Adventure Builder 같은 사례를 통해 파일, UI 이벤트, 세션 빈, EJB tier, database tier 사이의 런타임/배포 관계를 보여준다.
 
 ## 2. 왜 C&C View가 필요한가
@@ -40,7 +40,7 @@ Module View(모듈 뷰)는 소스 코드의 정적 분해를 보여주기 좋다
 - 비동기 이벤트, pub-sub, DB 접근, 원격 호출이 어디에서 일어나는가?
 - 하나의 crosscutting concern(횡단 관심사)이 여러 런타임 요소에 어떻게 적용되는가?
 
-C&C View는 이 질문에 답하기 위해 **component(컴포넌트)**, **connector(커넥터)**, **port(포트)**, **role(역할)**, **interface(인터페이스)**를 사용한다.
+C&C View는 이 질문에 답하기 위해 <strong>component(컴포넌트)</strong>, <strong>connector(커넥터)</strong>, <strong>port(포트)</strong>, <strong>role(역할)</strong>, <strong>interface(인터페이스)</strong>를 사용한다.
 
 ```mermaid
 flowchart TB
@@ -70,10 +70,10 @@ flowchart TB
 
 이 구조의 문제는 다음과 같다.
 
-- **Scattering(흩어짐)**: 하나의 관심사가 여러 클래스에 퍼져 있다.
-- **Tangling(뒤섞임)**: 업무 로직과 횡단 관심사 코드가 한 메서드 안에 섞인다.
-- **Change Amplification(변경 증폭)**: 로깅 signature(시그니처)나 transaction policy(트랜잭션 정책)가 바뀌면 여러 클래스를 동시에 수정해야 한다.
-- **Local Reasoning 저하**: Account의 핵심 책임을 읽으려 해도 보안/로깅/트랜잭션 코드가 시야를 방해한다.
+- <strong>Scattering(흩어짐)</strong>: 하나의 관심사가 여러 클래스에 퍼져 있다.
+- <strong>Tangling(뒤섞임)</strong>: 업무 로직과 횡단 관심사 코드가 한 메서드 안에 섞인다.
+- <strong>Change Amplification(변경 증폭)</strong>: 로깅 signature(시그니처)나 transaction policy(트랜잭션 정책)가 바뀌면 여러 클래스를 동시에 수정해야 한다.
+- <strong>Local Reasoning 저하</strong>: Account의 핵심 책임을 읽으려 해도 보안/로깅/트랜잭션 코드가 시야를 방해한다.
 
 ```mermaid
 flowchart LR
@@ -98,7 +98,7 @@ flowchart LR
   Auth --> Core
 ```
 
-AOP는 구현 기술이지만, 아키텍처 관점에서는 **concern allocation(관심사 배치)** 문제다. 즉, 어떤 관심사를 어느 module(모듈), component(컴포넌트), connector(커넥터), middleware(미들웨어)에 둘 것인지 결정하는 문제다.
+AOP는 구현 기술이지만, 아키텍처 관점에서는 <strong>concern allocation(관심사 배치)</strong> 문제다. 즉, 어떤 관심사를 어느 module(모듈), component(컴포넌트), connector(커넥터), middleware(미들웨어)에 둘 것인지 결정하는 문제다.
 
 ## 4. 런타임 C&C View 읽기
 
@@ -176,7 +176,7 @@ flowchart LR
   Validator -->|data access| Cache
 ```
 
-이 뷰는 public API 문서와 다르다. 목적은 사용법이 아니라 **외부 계약과 내부 구조 사이의 traceability(추적성)**를 남기는 것이다.
+이 뷰는 public API 문서와 다르다. 목적은 사용법이 아니라 <strong>외부 계약과 내부 구조 사이의 traceability(추적성)</strong>를 남기는 것이다.
 
 ## 6. Connector Abstraction 선택
 
@@ -226,19 +226,19 @@ flowchart LR
 
 주요 스타일은 다음과 같이 정리할 수 있다.
 
-- **Data Flow Style(데이터 흐름 스타일)**
+- <strong>Data Flow Style(데이터 흐름 스타일)</strong>
   - batch sequential(배치 순차), pipe-and-filter(파이프-필터)
   - 데이터 변환 파이프라인, ETL, compiler pipeline에 적합
-- **Call-Return Style(호출-반환 스타일)**
+- <strong>Call-Return Style(호출-반환 스타일)</strong>
   - client-server(클라이언트-서버), peer-to-peer(P2P), SOA
   - 요청/응답 API, RPC, service orchestration에 적합
-- **Event-Based Style(이벤트 기반 스타일)**
+- <strong>Event-Based Style(이벤트 기반 스타일)</strong>
   - publish-subscribe(출판-구독), implicit invocation(암시적 호출)
   - 느슨한 결합, 확장성, 비동기 처리에 적합
-- **Repository Style(레파지토리 스타일)**
+- <strong>Repository Style(레파지토리 스타일)</strong>
   - shared data(공유 데이터), blackboard(블랙보드)
   - 중앙 데이터 저장소를 중심으로 협업하는 구조에 적합
-- **Layered Style(계층 스타일)**
+- <strong>Layered Style(계층 스타일)</strong>
   - n-tier, presentation/application/data 분리
   - 의존성 방향과 책임 분리를 강조할 때 적합
 
@@ -267,32 +267,32 @@ mindmap
 
 새 시스템을 문서화할 때는 다음 순서로 정리하면 좋다.
 
-1. **Concern(관심사) 선택**
+1. <strong>Concern(관심사) 선택</strong>
    - 성능, 가용성, 보안, 변경용이성, 운영성 중 어떤 질문에 답할 것인지 먼저 정한다.
-2. **Component(컴포넌트) 식별**
+2. <strong>Component(컴포넌트) 식별</strong>
    - 런타임에 독립적으로 실행되거나 배포/스케일/장애 경계가 되는 단위를 고른다.
-3. **Connector(커넥터) 명명**
+3. <strong>Connector(커넥터) 명명</strong>
    - 단순한 선을 긋지 말고 `REST`, `JDBC`, `event`, `pub-sub`, `DB access`, `file I/O`처럼 상호작용 의미를 붙인다.
-4. **Interface/Port(인터페이스/포트) 표시**
+4. <strong>Interface/Port(인터페이스/포트) 표시</strong>
    - 외부에 노출되는 계약과 내부 위임 관계가 중요한 경우 포트를 표시한다.
-5. **Style(스타일) 선언**
+5. <strong>Style(스타일) 선언</strong>
    - 이 뷰가 client-server인지, pub-sub인지, layered인지 명시한다.
-6. **품질 속성 연결**
+6. <strong>품질 속성 연결</strong>
    - failover, retry, cache, queue, load balancing 같은 전술을 connector나 component에 표시한다.
-7. **추상화 수준 검토**
+7. <strong>추상화 수준 검토</strong>
    - 너무 자세하면 읽기 어렵고, 너무 추상적이면 의사결정에 쓸 수 없다.
 
 ## 9. Module View와의 구분
 
 C&C View를 클래스 다이어그램처럼 그리면 목적을 잃는다. 다음처럼 구분하면 된다.
 
-- **Module View(모듈 뷰)**
+- <strong>Module View(모듈 뷰)</strong>
   - 관심: 소스 코드 분해, 책임, 패키지, 레이어, dependency rule(의존성 규칙)
   - 질문: “어느 코드가 어디에 속하는가?”
-- **C&C View(컴포넌트-커넥터 뷰)**
+- <strong>C&C View(컴포넌트-커넥터 뷰)</strong>
   - 관심: 런타임 실행 요소, 통신, 프로토콜, 이벤트, 장애/성능 경로
   - 질문: “실행 중 무엇이 무엇과 어떻게 상호작용하는가?”
-- **Allocation View(할당 뷰)**
+- <strong>Allocation View(할당 뷰)</strong>
   - 관심: 배포 노드, 팀, 파일시스템, 인프라, 환경
   - 질문: “이 요소가 어디에 배치되는가?”
 
@@ -313,7 +313,7 @@ flowchart TB
 
 Android/Kotlin/Compose나 서버 시스템을 문서화할 때도 같은 원칙을 적용할 수 있다.
 
-- UI 이벤트, ViewModel, UseCase, Repository, DataSource의 관계는 단순 class dependency가 아니라 **runtime interaction(런타임 상호작용)**으로 볼 수 있다.
+- UI 이벤트, ViewModel, UseCase, Repository, DataSource의 관계는 단순 class dependency가 아니라 <strong>runtime interaction(런타임 상호작용)</strong>으로 볼 수 있다.
 - Flow/Coroutine/Channel/EventBus는 connector로 명명할 수 있다.
 - Retrofit/Room/DataStore 접근은 `HTTP`, `DB access`, `local persistence` connector로 표현할 수 있다.
 - 로그인, 로깅, 트랜잭션, 권한 같은 관심사는 AOP가 아니더라도 interceptor, middleware, decorator, policy object로 분리할 수 있다.
