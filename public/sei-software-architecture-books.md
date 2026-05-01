@@ -27,7 +27,7 @@ flowchart LR
   Decision --> Eval["ATAM / Review<br/>평가와 리스크 식별"]
   Eval --> Views["Views and Beyond<br/>Module · C&C · Allocation"]
   Views --> Feedback["Stakeholder Feedback<br/>이해관계자 피드백"]
-  Feedback -. refine .-> ASR
+  Feedback -.->|refine| ASR
 ```
 
 ## 1. Software Architecture in Practice, 4th Edition
