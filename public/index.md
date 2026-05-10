@@ -13,6 +13,7 @@ tags: [wiki, public]
 ## Published Pages
 
 - [[component-and-connector-views|C&C 뷰와 커넥터 스타일]]
+- [[family-stay-suwon-2h-under-400k|수원 2시간권 가족 숙소 후보]]
 - [[sei-software-architecture-books|SEI 아키텍처 핵심 서적]]
 - [[test-publish|Publish 테스트 문서]]
 
