@@ -27,6 +27,7 @@ tags: [travel, family, camping, glamping, resort, suwon]
 |---|---|---|---|---|
 | **괴산 코오롱 스포츠 캠핑파크** | 세팅 캠핑/카라반 · 충북 괴산 | 텐트 1박 19.8만, 2박 31.9만 / 카라반 1박 25.3만, 2박 39.6만 · 약 1시간 50분~2시간 20분 | 공용 | [공식](https://www.koloncamping.com/) · [요금](https://www.koloncamping.com/sub1/sub5_3.php) · [지도](https://map.naver.com/p/search/%EC%BD%94%EC%98%A4%EB%A1%B1%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%EC%BA%A0%ED%95%91%ED%8C%8C%ED%81%AC) · 주말은 금~일 2박만 가능 |
 | **캠핏 이지캠핑** | 이지캠핑/세팅 캠핑 · 참여 캠핑장별 상이 | 지점별 상이, 대체로 40만 이내 가능성 높음 · 지점별 상이 | 지점별 확인 | [캠핏](https://camfit.co.kr/landing/684833c2ea0a43001de569e0) · [공유링크](https://camfit.onelink.me/y0My/zzdrdtzj?deep_link_value=%2Flanding%2F684833c2ea0a43001de569e0&af_web_dp=https%3A%2F%2Fcamfit.co.kr%2Flanding%2F684833c2ea0a43001de569e0) · 침구/식기 제공 여부 확인 |
+| **캠핏 이지캠핑 2시간권 캠핑장** | 이지캠핑/이지돔 · 포천/남양주/가평/진천/원주/제천권 | 약 7만~12만대부터 노출된 후보 있음, 이지캠핑 상품가는 날짜별 확인 · 약 80~130분 | 대부분 공용, 일부 개별샤워/개별화장실 표기 | [아래 목록](#캠핏-이지캠핑-2시간권-후보) · 지투/수동시온/레드우드/워터사이드/원주키즈/원주산노리 등 우선 확인 |
 | **양평 글램핑권** | 글램핑 · 경기 양평 | 약 5만~25만대부터 · 약 80~110분 | 업체별 확인 | [지도](https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EA%B8%80%EB%9E%A8%ED%95%91) · 개별화장실/냉난방/바비큐 비용 확인 |
 | **양평 블룸비스타 호텔** | 호텔 · 경기 양평 | 평일 13만대~, 주말/패밀리룸 18만~30만대 · 약 80~100분 | 객실 내 | [공식](https://www.bloomvista.co.kr/) · [지도](https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EB%B8%94%EB%A3%B8%EB%B9%84%EC%8A%A4%ED%83%80%20%ED%98%B8%ED%85%94) · 조식/키즈라운지 별도 가능 |
 | **여주 썬밸리호텔** | 호텔/리조트 · 경기 여주 | 약 12만~30만대 · 약 70~90분 | 객실 내 | [공식](https://www.sunvalleyhotel.co.kr/) · [지도](https://map.naver.com/p/search/%EC%97%AC%EC%A3%BC%20%EC%8D%AC%EB%B0%B8%EB%A6%AC%ED%98%B8%ED%85%94) · 워터파크 포함 여부 확인 |
@@ -165,10 +166,32 @@ tags: [travel, family, camping, glamping, resort, suwon]
 - 참여 캠핑장별 시설 편차가 큼
 - 에어컨, 화장실 거리, 전기 용량, 침구/식기 제공 여부 확인 필요
 
+#### 캠핏 이지캠핑 2시간권 후보
+
+캠핏 검색 결과와 네이버 플레이스/검색 노출 정보를 함께 본 후보입니다. **수원 출발 2시간 전후**라서 주말 정체가 있으면 일부는 초과할 수 있습니다.
+
+| 캠핑장 | 지역/주소 | 수원 기준 | 가격/형태 | 화장실/샤워 | 링크/메모 |
+|---|---|---|---|---|---|
+| **지투(G2) 캠핑장** | 경기 포천시 소흘읍 부흥로 370 | 약 90~120분 | 이지캠 코너 후기 1박 **12만원대** 노출 | 공용 추정 | [캠핏](https://camfit.co.kr/camp/680f0008e39b8d001d02fd8d/68ad688d8673a1001d2a1f35) · [지도](https://map.naver.com/p/search/%EC%A7%80%ED%88%AC%EC%BA%A0%ED%95%91%EC%9E%A5) · 텐트/화로 준비, 이불·식기 별도 확인 |
+| **수동시온캠프** | 경기 남양주시 수동면 지둔리 230-9 | 약 80~110분 | 일반 사이트 4만~6만원 노출, 이지캠핑가는 캠핏 확인 | 공용 추정 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/62557c673ea01c001e00b692/687a0d6aae2161001dfee3e7) · [지도](https://map.naver.com/p/search/%EC%88%98%EB%8F%99%EC%8B%9C%EC%98%A8%EC%BA%A0%ED%94%84) · 키즈/계곡형 |
+| **레드우드캠핑장** | 경기 가평군 북면 가화로 2841 | 약 100~130분 | 일반 사이트 5만~7만원 노출, 이지캠핑가는 캠핏 확인 | 네이버 편의정보에 개별화장실/개별샤워실 표기 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/67f4c8c309f9de001df23141/688205782c1c7c001d68af85) · [지도](https://map.naver.com/p/search/%EB%A0%88%EB%93%9C%EC%9A%B0%EB%93%9C%EC%BA%A0%ED%95%91%EC%9E%A5) · 가평권이라 주말 정체 주의 |
+| **워터사이드캠핑장** | 충북 진천군 백곡면 배티로 22-10 | 약 90~120분 | 캠핏 이지캠핑존, 가격은 날짜별 확인 | 공용 추정 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/665ec3ea26adf6001e2a9b60/685bb63cee06d3001dd4cb4b) · [지도](https://map.naver.com/p/search/%EC%9B%8C%ED%84%B0%EC%82%AC%EC%9D%B4%EB%93%9C%EC%BA%A0%ED%95%91%EC%9E%A5) · 타프/텐트/에어박스/버너/화로 등 제공 설명 노출 |
+| **원주키즈캠핑장** | 강원 원주시 신림면 솔치로 88 | 약 100~130분 | 이지캠핑존, 가격은 캠핏 확인 | 공용 추정 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/62873d9373b1e2001ebd8537/6300442f2333c7001ed39726) · [지도](https://map.naver.com/p/search/%EC%9B%90%EC%A3%BC%ED%82%A4%EC%A6%88%EC%BA%A0%ED%95%91%EC%9E%A5) · 에어컨/스마트TV/테이블/의자, 침구·식기·버너 별도 준비 안내 노출 |
+| **원주산노리캠핑장** | 강원 원주시 신림면 재사동길 50 | 약 100~130분 | 이지캠핑돔, 4인 기준 안내 노출 | 공용 | [캠핏 이지캠핑돔](https://camfit.co.kr/camp/638d48f5d49dab001fc038f8/6423d8be0584c6001e057b03) · [지도](https://map.naver.com/p/search/%EC%9B%90%EC%A3%BC%EC%82%B0%EB%85%B8%EB%A6%AC%EC%BA%A0%ED%95%91%EC%9E%A5) · 냉난방 가능, 침구 포함 캠핑용품 별도 준비 안내 |
+| **리아띠캠핑장** | 충북 제천시 봉양읍 국사봉로 287 | 약 110~140분 | 일반 사이트 7만~9만원 노출, 이지캠핑가는 캠핏 확인 | 개별샤워실 표기, 화장실은 확인 필요 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/66c43348e15294001e86006f/68b7e9c9d64d30001d433aaa) · [지도](https://map.naver.com/p/search/%EB%A6%AC%EC%95%84%EB%9D%A0%EC%BA%A0%ED%95%91%EC%9E%A5) · 제천권이라 2시간 경계 |
+| **월현포레스트** | 강원 횡성군 강림면 월안길 251 | 약 120~150분 | 일반 사이트 2.5만~6만원 노출, 이지캠핑가는 캠핏 확인 | 공용 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/652e67fe7ee9be001e1b88f8/67e36e4f74009f001daff0c5) · [지도](https://map.naver.com/p/search/%EC%9B%94%ED%98%84%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8) · 2시간 조건은 주말에 불안정 |
+| **모두의 캠핑장** | 강원 횡성군 갑천면 수동길 170-1 | 약 120~150분 | 네이버예약 6만원부터, 이지캠핑가는 캠핏 확인 | 공용 | [캠핏 이지캠핑존](https://camfit.co.kr/camp/6890d444358030001d065a5a/689aa3426f23df001d32a98a) · [지도](https://map.naver.com/p/search/%EB%AA%A8%EB%91%90%EC%9D%98%20%EC%BA%A0%ED%95%91%EC%9E%A5%20%ED%9A%A1%EC%84%B1) · 이불/식기만 준비하면 되는 형태로 설명 노출 |
+
+**제외/후순위**
+
+- **신두리세븐패밀리캠핑장, 태안 바다드림 캠핑장:** 태안권이라 수원 2시간 조건이 주말에는 불안정합니다.
+- **캠핑느루:** 강원 고성권으로 수원 2시간권에서 제외했습니다.
+
 **링크**
 
 - [캠핏 이지캠핑 랜딩 페이지](https://camfit.co.kr/landing/684833c2ea0a43001de569e0)
 - [사용자가 공유한 앱/웹 링크](https://camfit.onelink.me/y0My/zzdrdtzj?deep_link_value=%2Flanding%2F684833c2ea0a43001de569e0&af_web_dp=https%3A%2F%2Fcamfit.co.kr%2Flanding%2F684833c2ea0a43001de569e0)
+- [캠핏 이지캠핑 검색](https://camfit.co.kr/search/result?adultCnt=2&services=%EC%9D%B4%EC%A7%80%EC%BA%A0%ED%95%91)
 - [네이버 검색](https://search.naver.com/search.naver?query=%EC%BA%A0%ED%95%8F%20%EC%9D%B4%EC%A7%80%EC%BA%A0%ED%95%91)
 
 ---
